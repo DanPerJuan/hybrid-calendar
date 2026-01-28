@@ -26,6 +26,7 @@ class CalendarStyle {
   /// Background color for dates within a selected range.
   final Color isInRangeDateColor;
 
+  /// Background color for the year picker dialog.
   final Color yearPickerColor;
 
   /// TEXT STYLES

@@ -76,31 +76,36 @@ class CalendarHeader extends StatelessWidget {
         ///
         /// Displays the localized month name and year (e.g., "January 2026").
         /// Tapping opens the month/year picker dialog.
-        Material(
-          color: Colors.transparent,
-          child: InkWell(
-            onTap: () => _showMonthYearPicker(context),
-            borderRadius: BorderRadius.circular(8),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    '${CalendarUtils.getMonthName(month: month, locale: locale)} ${month.year}',
-                    style: config.style.headerTextStyle,
+        config.showYearPickerHeader
+            ? Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  onTap: () => _showMonthYearPicker(context),
+                  borderRadius: BorderRadius.circular(8),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          '${CalendarUtils.getMonthName(month: month, locale: locale)} ${month.year}',
+                          style: config.style.headerTextStyle,
+                        ),
+                        const SizedBox(width: 4),
+                        Icon(
+                          Icons.arrow_drop_down,
+                          color: config.style.headerTextStyle.color,
+                          size: 20,
+                        ),
+                      ],
+                    ),
                   ),
-                  const SizedBox(width: 4),
-                  Icon(
-                    Icons.arrow_drop_down,
-                    color: config.style.headerTextStyle.color,
-                    size: 20,
-                  ),
-                ],
+                ),
+              )
+            : Text(
+                '${CalendarUtils.getMonthName(month: month, locale: locale)} ${month.year}',
+                style: config.style.headerTextStyle,
               ),
-            ),
-          ),
-        ),
 
         /// NAVIGATION ARROWS
         Row(

@@ -136,7 +136,7 @@ class CalendarConfig {
     this.showAdjacentMonthDays = true,
     this.showHeader = true,
     this.showWeekDayLabels = true,
-    this.showYearPickerHeader = true,
+    this.showYearPickerHeader = false,
 
     /// Styling
     this.style = const CalendarStyle(),

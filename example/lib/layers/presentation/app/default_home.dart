@@ -39,7 +39,7 @@ class DefaultHome extends StatelessWidget {
             ),
             const SizedBox(height: 16),
 
-            /*HybridCalendar(
+            HybridCalendar(
               config: CalendarConfig(
                 enableSwipe: true,
                 firstDayOfWeek: DayOfWeek.friday,
@@ -49,7 +49,8 @@ class DefaultHome extends StatelessWidget {
               ),
               initialSelectedDate: DateTime(2026, 4),
               onDateSelected: (_) {},
-            ),*/
+            ),
+
             HybridCalendar(
               config: CalendarConfig(
                 disabledDaysOfWeek: {DayOfWeek.sunday},
@@ -60,7 +61,7 @@ class DefaultHome extends StatelessWidget {
               onDateSelected: (_) {},
             ),
 
-            /*Container(
+            Container(
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.blue.shade200, width: 5),
                 borderRadius: BorderRadius.circular(20),
@@ -114,7 +115,7 @@ class DefaultHome extends StatelessWidget {
                   debugPrint("Día seleccionado: ${day.date}");
                 },
               ),
-            ),*/
+            ),
           ],
         ),
       ),
