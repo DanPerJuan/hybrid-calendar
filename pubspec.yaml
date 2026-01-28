@@ -1,0 +1,23 @@
+name: hybrid_calendar
+description: HybridCalendar widget allows creating customized Calendar with various properties like padding, colors, limit days, etc.
+version: 1.0.0
+homepage: https://rudo.es/
+repository: https://github.com/rudoapps/hybrid-calendar.git
+issue_tracker: https://github.com/rudoapps/hybrid-calendar/issues
+documentation: https://github.com/rudoapps/hybrid-calendar#readme
+topics:
+  - calendar
+
+environment:
+  sdk: ">=3.8.6 <4.0.0"
+
+dependencies:
+  easy_localization: ^3.0.8
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.1
+
+dev_dependencies:
+
+flutter:
+  uses-material-design: true
